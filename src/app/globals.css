@@ -14,26 +14,49 @@ body {
 }
 
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #578a65 #70b283;
-  }
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #578a65 #70b283;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 16px;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
 
-  *::-webkit-scrollbar-track {
-    background: #70b283;
-  }
+*::-webkit-scrollbar-track {
+  background: #70b283;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #578a65;
-    border-radius: 10px;
-    border: 3px solid #ffffff;
+*::-webkit-scrollbar-thumb {
+  background-color: #578a65;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+
+.boujee-text {
+  --bg-size: 400%;
+  --color-one: rgb(76, 121, 89);
+  --color-two: rgb(2, 33, 11);
+  background: linear-gradient(
+                90deg,
+                var(--color-one),
+                var(--color-two),
+                var(--color-one)
+              ) 0 0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: move-bg 12s infinite linear;
+}
+
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
   }
+}
+
 
 @layer utilities {
   .text-balance {

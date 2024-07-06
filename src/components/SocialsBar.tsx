@@ -2,10 +2,10 @@ export default function SocialsBar () {
     return (
         <div className="relative z-10 flex flex-col justify-center">
             <div className="flex w-12 flex-col">
-                <a href="https://github.com/randysim">
+                <a href="https://github.com/randysim" target="_blank">
                     <img src="/github.svg" className="w-10 h-10 my-3 cursor-pointer" />
                 </a>
-                <a href="https://www.linkedin.com/in/randysim/">
+                <a href="https://www.linkedin.com/in/randysim/" target="_blank">
                     <img src="/linkedin.svg" className="w-10 h-10 my-3 cursor-pointer" />
                 </a>
                 <a href="mailto:randysim9@gmail.com" className="relative group">
