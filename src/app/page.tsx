@@ -39,17 +39,19 @@ function ProjectCard(
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
-      <div className="flex w-full h-screen justify-center items-center relative">
-        <SocialsBar />
-        <div className="flex flex-wrap flex-col items-start">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold w-full text-right pr-1">Software Engineer</h1>
-          <h1 className="text-6xl sm:text-8xl md:text-9xl font-bold">RANDY SIM</h1>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold ml-1">CS @ SBU</h1>
+      <div className="flex flex-col w-full h-screen justify-center items-center relative flex-wrap">
+        <div className="flex w-full justify-center items-center">
+          <SocialsBar />
+          <div className="flex flex-wrap flex-col items-start">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold w-full text-right pr-1">Software Engineer</h1>
+            <h1 className="text-6xl sm:text-8xl md:text-9xl font-bold">RANDY SIM</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold ml-1">CS @ SBU</h1>
+          </div>
         </div>
         <div 
-          className="w-full flex justify-center items-center absolute bottom-[150px] sm:bottom-20 flex-wrap"
+          className="w-full flex justify-center items-center flex-wrap mt-20"
         >
-          <h1 className="w-full text-center text-2xl mb-5 italic">down here!</h1>
+          <h1 className="w-full text-center text-2xl mb-5 italic">scroll</h1>
           <img
             onClick={() => {
               let element = document.getElementById("projects");
