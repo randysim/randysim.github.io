@@ -1,5 +1,6 @@
 'use client'
 
+import Button from "@/components/Button";
 import SocialsBar from "@/components/SocialsBar";
 import { useRouter } from "next/navigation";
 
@@ -40,6 +41,8 @@ function ProjectCard(
 }
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <div className="overflow-x-hidden">
       <div className="flex flex-col w-full h-screen justify-center items-center relative flex-wrap">
@@ -69,11 +72,16 @@ export default function Home() {
         </div>
       </div>
       <div id="about" className="flex w-full justify-center">
-          <div className=" text-2xl w-full md:w-3/4 md:text-4xl text-center p-5">
+          <div className="text-2xl w-full md:w-3/4 md:text-4xl text-center p-5">
             Aspiring Software Engineer based in NYC. Currently studying Computer Science @ Stony Brook University. I build feature rich, functional experiences.
+            <div className="w-full mt-10 flex justify-center">
+              <Button width="200px" height="60px" onClick={() => {
+                window.open("/resume.pdf", "_blank")
+              }} variant="filled">RESUME</Button>
+            </div>
           </div>
       </div>
-      <div id="projects" className="flex w-full justify-center flex-wrap overflow-auto pb-[150px] mt-10">
+      <div id="projects" className="flex w-full justify-center flex-wrap overflow-auto pb-[150px] mt-20">
         <div className="flex flex-col items-start md:w-[1000px] p-2">
           <h1 className="text-6xl w-full font-bold ml-2 mb-10">PROJECTS</h1>
           <div className="flex flex-wrap w-full">

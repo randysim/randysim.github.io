@@ -6,6 +6,7 @@
   --background: 145, 230, 169;
   --background-text: 2, 33, 11;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
