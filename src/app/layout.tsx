@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = IBM_Plex_Sans({ weight: "400", subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Randy Sim",
@@ -18,7 +19,8 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={font.className}>
+          <NavBar />
           {children}
       </body>
     </html>
