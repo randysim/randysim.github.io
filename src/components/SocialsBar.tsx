@@ -1,7 +1,7 @@
 export default function SocialsBar () {
     return (
-        <div className="relative bottom-0 left-0 z-10 flex w-16 flex-col justify-center">
-            <div className="flex w-20 flex-col">
+        <div className="relative z-10 flex flex-col justify-center">
+            <div className="flex w-12 flex-col">
                 <a href="https://github.com/randysim">
                     <img src="/github.svg" className="w-10 h-10 my-3 cursor-pointer" />
                 </a>

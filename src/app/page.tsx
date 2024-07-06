@@ -39,7 +39,7 @@ function ProjectCard(
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
-      <div className="flex w-full h-screen justify-center items-center flex-wrap relative">
+      <div className="flex w-full h-screen justify-center items-center relative">
         <SocialsBar />
         <div className="flex flex-wrap flex-col items-start">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold w-full text-right pr-1">Software Engineer</h1>
