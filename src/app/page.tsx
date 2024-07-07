@@ -8,14 +8,17 @@ function ProjectCard(
   { 
     name,
     imageUrl,
-    to
+    to,
+    alignLeft
   } : {
     name: string,
     imageUrl: string,
-    to: string
+    to: string,
+    alignLeft?: boolean
   }
 ) {
   const router = useRouter();
+  let alignment = alignLeft ? "object-left-top " : "";
 
   return (
     <div 
@@ -29,7 +32,7 @@ function ProjectCard(
       >
         <img 
           src={imageUrl}
-          className="w-full h-full object-cover object-left-top rounded-lg bg-[#578a65] drop-shadow-2xl"
+          className={`w-full h-full object-cover ${alignment}rounded-lg bg-[#578a65] drop-shadow-2xl`}
         />
         <div className="absolute w-full h-full bg-black rounded-lg opacity-0 group-hover:opacity-50 transition-all duration-200 ease-linear" />
         <div className="absolute flex opacity-0 w-full h-full rounded-lg justify-center items-center group-hover:opacity-100 transition-all duration-200 ease-linear">
@@ -83,7 +86,7 @@ export default function Home() {
         <div className="flex flex-col items-start md:w-[1000px] p-2">
           <h1 className="text-6xl w-full font-bold ml-2 mb-10">PROJECTS</h1>
           <div className="flex flex-wrap w-full">
-            <ProjectCard name="Epsilon" imageUrl="/epsilon.png" to="/epsilon" />
+            <ProjectCard name="Epsilon" imageUrl="/epsilon.png" to="/epsilon" alignLeft />
             <ProjectCard name="randysim.me" imageUrl="/randysimme.png" to="/" />
             <ProjectCard name="Vigil.us" imageUrl="/vigilus.png" to="/vigilus" />
           </div>
