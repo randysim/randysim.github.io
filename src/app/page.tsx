@@ -48,7 +48,7 @@ export default function Home() {
           <SocialsBar />
           <div className="flex flex-wrap flex-col items-start">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold w-full text-right pr-1">Software Engineer</h1>
-            <h1 className="text-6xl sm:text-8xl md:text-9xl font-bold">RANDY SIM</h1>
+            <h1 className="text-5xl sm:text-8xl md:text-9xl font-bold">RANDY SIM</h1>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold ml-1">CS @ <span className="text-[#9a0000]">SBU</span></h1>
           </div>
         </div>
