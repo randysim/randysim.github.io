@@ -21,9 +21,9 @@ export default function Epsilon () {
             <h1 className="text-6xl font-bold w-full text-center mb-10 mt-5">EPSILON</h1>
             <Carousel 
                 elements={[
-                    <img src="/epsilon.png" alt="epsilon" className="mx-auto rounded-lg" width={800} />,
-                    <img src="/epsilon-attendance.png" alt="epsilon attendance" className="mx-auto rounded-lg" width={800} />,
-                    <img src="/epsilon-catalog.png" alt="epsilon attendance" className="mx-auto rounded-lg" width={800} />
+                    <img src="/epsilon.png" alt="epsilon" className="mx-auto rounded-lg" width={800} key={0} />,
+                    <img src="/epsilon-attendance.png" alt="epsilon attendance" className="mx-auto rounded-lg" width={800} key={1} />,
+                    <img src="/epsilon-catalog.png" alt="epsilon attendance" className="mx-auto rounded-lg" width={800} key={2} />
                 ]} 
             />
             <div className="flex justify-center w-full mt-5">
