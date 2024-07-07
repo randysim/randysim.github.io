@@ -18,7 +18,7 @@ export default function NotFound() {
                         router.push("/")
                     }}
                 >
-                    Go Home
+                    GO HOME
                 </Button>
             </div>
         </div>

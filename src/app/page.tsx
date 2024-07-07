@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <div className="overflow-x-hidden">
       <div className="flex flex-col w-full h-screen justify-center items-center relative flex-wrap">
-        <div className="flex w-full justify-center items-center">
+        <div className="flex w-full justify-center items-center" id="title-element">
           <SocialsBar />
           <div className="flex flex-wrap flex-col items-start">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold w-full text-right pr-1">Software Engineer</h1>
