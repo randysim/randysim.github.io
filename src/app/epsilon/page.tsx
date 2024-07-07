@@ -44,8 +44,8 @@ export default function Epsilon () {
                 </div>
             </div>
             <div className="flex justify-center w-full flex-col items-center mt-10">
-                <a href="https://github.com/stuysu/epsilon" className="underline text-4xl cursor-pointer">Github</a>
-                <a href="https://epsilon.stuysu.org/" className="underline text-4xl cursor-pointer mt-5">{"Live Site [Student Only]"}</a>
+                <a href="https://github.com/stuysu/epsilon" target="_blank" className="underline text-4xl cursor-pointer">Github</a>
+                <a href="https://epsilon.stuysu.org/" target="_blank" className="underline text-4xl cursor-pointer mt-5">{"Live Site [Student Only]"}</a>
             </div>
 
         </div>
