@@ -41,8 +41,6 @@ function ProjectCard(
 }
 
 export default function Home() {
-  const router = useRouter();
-
   return (
     <div className="overflow-x-hidden">
       <div className="flex flex-col w-full h-screen justify-center items-center relative flex-wrap">

@@ -18,7 +18,7 @@ export default function Button({
         <button
             onClick={onClick}
             style={{ height, width }} 
-            className={`text-white rounded-3xl bg-[${bgcolor}] ${border}text-3xl p-3 hover:bg-[#314d39] transition-all duration-200 ease-linear flex justify-center items-center`}
+            className={`text-white rounded-3xl bg-[${bgcolor}] ${border}text-3xl p-3 hover:bg-[#314d39] hover:text-[#bbb] transition-all duration-200 ease-linear flex justify-center items-center`}
         >
             {children}
         </button>
