@@ -8,6 +8,7 @@ const font = IBM_Plex_Sans({ weight: "400", subsets: ['latin'] });
 export const metadata: Metadata = {
   title: "Randy Sim",
   description: "CS @ SBU | Software Engineer",
+  themeColor: "#91e6a9"
 };
 
 export default function RootLayout({

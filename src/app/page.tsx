@@ -74,7 +74,7 @@ export default function Home() {
       </div>
       <div id="about" className="flex w-full justify-center">
           <div className="text-2xl w-full md:w-3/4 md:text-4xl text-center p-5">
-            Aspiring Software Engineer based in NYC. Currently studying Computer Science @ Stony Brook University. I build feature rich, functional experiences.
+            Aspiring Software Engineer based in NYC. Currently studying Computer Science @ Stony Brook University. I build feature-rich, functional experiences.
             <div className="w-full mt-10 flex justify-center">
               <Button width="200px" height="60px" onClick={() => {
                 window.open("/resume.pdf", "_blank")
