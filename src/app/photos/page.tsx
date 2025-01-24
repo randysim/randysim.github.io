@@ -1,8 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import Image from 'next/image';
 
 const ResponsiveMasonry = dynamic(() => import('react-responsive-masonry').then((mod) => mod.ResponsiveMasonry), {
   ssr: false,
@@ -14,20 +13,26 @@ const Masonry = dynamic(() => import('react-responsive-masonry').then((mod) => m
 
 export default function Photos() {
     const [loading, setLoading] = useState(true);
+    const [imagesLoaded, setImagesLoaded] = useState(0);
     let photos = 33;
 
     let photoArray = [];
     for (let i = 1; i <= photos; i++) {
         photoArray.push(
-            <LazyLoadImage
-                src={`/photos/${i}.jpg?w=500&q=75`}
-                alt={`photo-${i}`}
-                effect="blur"
-                className="rounded-lg object-cover w-full"
-                key={i}
-                afterLoad={() => setLoading(false)}
-                placeholder={<div className="animate-pulse bg-gray-300 h-64 w-full rounded-lg"></div>}
-            />
+            <div key={i} className="w-full">
+                <Image
+                    src={`/photos/${i}.jpg`}
+                    alt={`photo-${i}`}
+                    width={500}
+                    height={500}
+                    className="rounded-lg object-cover w-full"
+                    onLoadingComplete={() => {
+                        setLoading(false);
+                    }}
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI/wM6hgbIjgAAAABJRU5ErkJggg=="
+                />
+            </div>
         );
     }
 
