@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
@@ -13,7 +13,6 @@ const Masonry = dynamic(() => import('react-responsive-masonry').then((mod) => m
 
 export default function Photos() {
     const [loading, setLoading] = useState(true);
-    const [imagesLoaded, setImagesLoaded] = useState(0);
     let photos = 33;
 
     let photoArray = [];
