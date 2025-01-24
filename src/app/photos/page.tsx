@@ -21,7 +21,7 @@ export default function Photos() {
         photoArray.push(
             <div key={i} className="w-full">
                 <Image
-                    src={`/photos/${i}.jpg`}
+                    src={`/photos/compressed_${i}.jpg`}
                     alt={`photo-${i}`}
                     width={500}
                     height={500}
