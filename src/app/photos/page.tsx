@@ -25,6 +25,7 @@ export default function Photos() {
                     alt={`photo-${i}`}
                     width={500}
                     height={500}
+                    quality={75}
                     className="rounded-lg object-cover w-full"
                     onLoadingComplete={() => {
                         setLoading(false);
