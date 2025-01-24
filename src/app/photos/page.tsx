@@ -28,7 +28,10 @@ export default function Photos() {
                     quality={75}
                     className="rounded-lg object-cover w-full"
                     onLoadingComplete={() => {
-                        setLoading(false);
+                        // set loading to false on first image load
+                        if (loading) {
+                            setLoading(false);
+                        }
                     }}
                     placeholder="blur"
                     blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI/wM6hgbIjgAAAABJRU5ErkJggg=="
