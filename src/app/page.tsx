@@ -91,6 +91,16 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div id="about" className="flex w-full justify-center">
+          <div className="text-2xl w-full md:w-3/4 md:text-4xl text-center p-5">
+            I also take pictures!
+            <div className="w-full mt-10 flex justify-center">
+              <Button width="200px" height="60px" onClick={() => {
+                window.open("/photos", "_blank")
+              }} variant="filled">PHOTOS</Button>
+            </div>
+          </div>
+      </div>
     </div>
   );
 }
