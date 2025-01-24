@@ -40,11 +40,6 @@ export default function Photos() {
         );
     }
 
-    useEffect(() => {
-        const timer = setTimeout(() => setLoading(false), 5000);
-        return () => clearTimeout(timer);
-    }, []);
-
     return (
         <div className="w-full p-5">
             {loading && (
