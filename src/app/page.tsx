@@ -50,7 +50,7 @@ export default function Home() {
         <div className="flex w-full justify-center items-center">
           <SocialsBar />
           <div className="flex flex-wrap flex-col items-start">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold w-full text-right pr-1">Software Engineer</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold w-full text-right pr-1">Builder</h1>
             <h1 className="text-5xl sm:text-8xl md:text-9xl font-bold">RANDY SIM</h1>
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold ml-1">CS @ <span className="text-[#9a0000]">SBU</span></h1>
           </div>
@@ -74,7 +74,7 @@ export default function Home() {
       </div>
       <div id="about" className="flex w-full justify-center">
           <div className="text-2xl w-full md:w-3/4 md:text-4xl text-center p-5">
-            Aspiring Software Engineer based in NYC. Currently studying Computer Science @ Stony Brook University. I build feature-rich, functional experiences.
+            Currently studying Computer Science @ Stony Brook University. Amateur risk taker. I only ever try to do big things.
             <div className="w-full mt-10 flex justify-center">
               <Button width="200px" height="60px" onClick={() => {
                 window.open("/resume.pdf", "_blank")
