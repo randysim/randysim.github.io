@@ -17,6 +17,19 @@ html, body {
   box-sizing: border-box;
 }
 
+@keyframes grid {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(var(--cell-size) * -1));
+  }
+}
+
+.animate-grid {
+  animation: grid 20s linear infinite;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
