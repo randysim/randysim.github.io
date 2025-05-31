@@ -1,104 +1,54 @@
 'use client'
-
-import Button from "@/components/Button";
-import SocialsBar from "@/components/SocialsBar";
-import { useRouter } from "next/navigation";
-
-function ProjectCard(
-  { 
-    name,
-    imageUrl,
-    to,
-    alignLeft
-  } : {
-    name: string,
-    imageUrl: string,
-    to: string,
-    alignLeft?: boolean
-  }
-) {
-  const router = useRouter();
-  let alignment = alignLeft ? "object-left-top " : "";
-
-  return (
-    <div 
-      className="flex w-full sm:w-1/2 p-2 h-[320px] max-w-[500px] mt-10" 
-    >
-      <div
-        className="flex flex-wrap w-full h-full cursor-pointer rounded-lg relative group" 
-        onClick={() => {
-          router.push(to);
-        }}
-      >
-        <img 
-          src={imageUrl}
-          className={`w-full h-full object-cover ${alignment}rounded-lg bg-backgroundSecondary drop-shadow-2xl`}
-        />
-        <div className="absolute w-full h-full bg-black rounded-lg opacity-0 group-hover:opacity-50 transition-all duration-200 ease-linear" />
-        <div className="absolute flex opacity-0 w-full h-full rounded-lg justify-center items-center group-hover:opacity-100 transition-all duration-200 ease-linear">
-          <span className="font-bold text-4xl text-white opacity-100">{name.toUpperCase()}</span>
-        </div>
-      </div>
-    </div>
-  )
-}
+import { motion } from 'framer-motion'
+import { RetroGrid } from "@/components/magicui/retro-grid";
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
-      <div className="flex flex-col w-full h-screen justify-center items-center relative flex-wrap">
-        <div className="flex w-full justify-center items-center">
-          <SocialsBar />
-          <div className="flex flex-wrap flex-col items-start">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold w-full text-right pr-1">Builder</h1>
-            <h1 className="text-5xl sm:text-8xl md:text-9xl font-bold">RANDY SIM</h1>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold ml-1">CS @ <span className="text-[#9a0000]">SBU</span></h1>
-          </div>
-        </div>
-        <div 
-          className="w-full flex justify-center items-center flex-wrap mt-20"
-        >
-          <h1
-            onClick={() => {
-              let element = document.getElementById("projects");
-
-              if (element) {
-                element.scrollIntoView({behavior: "smooth"});
-              }
-            }} 
-            className="w-full text-center text-3xl mb-5 italic cursor-pointer boujee-text"
-          >
-            scroll
-          </h1>
-        </div>
-      </div>
-      <div id="about" className="flex w-full justify-center">
-          <div className="text-2xl w-full md:w-3/4 md:text-4xl text-center p-5">
-            Currently studying Computer Science @ Stony Brook University.
-            <div className="w-full mt-10 flex justify-center">
-              <Button width="200px" height="60px" onClick={() => {
-                window.open("/resume.pdf", "_blank")
-              }} variant="filled">RESUME</Button>
-            </div>
-          </div>
-      </div>
-      <div id="projects" className="flex w-full justify-center flex-wrap overflow-auto pb-[150px] mt-20">
-        <div className="flex flex-col items-start md:w-[1000px] p-2">
-          <h1 className="text-6xl w-full font-bold ml-2 mb-10">PROJECTS</h1>
-          <div className="flex flex-wrap w-full">
-            <ProjectCard name="Epsilon" imageUrl="/epsilon.png" to="/epsilon" alignLeft />
-            <ProjectCard name="randysim.me" imageUrl="/randysimme.png" to="/" />
-          </div>
-        </div>
-      </div>
-      <div id="about" className="flex w-full justify-center">
-          <div className="text-2xl w-full md:w-3/4 md:text-4xl text-center p-5">
-            I also take pictures!
-            <div className="w-full mt-10 flex justify-center">
-              <Button width="200px" height="60px" onClick={() => {
-                window.open("/photos", "_blank")
-              }} variant="filled">PHOTOS</Button>
-            </div>
+    <div className="h-screen flex flex-col items-center">
+      <RetroGrid />
+      <div className="h-full flex flex-col justify-center items-center">
+          <div className="relative">
+            <motion.p 
+              className="text-4xl -mb-10 ml-2 absolute left-0"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              HI 👋, I'M
+            </motion.p> 
+            <motion.p 
+              className="text-[125px] font-bold bg-clip-text text-transparent whitespace-nowrap"
+              style={{
+                backgroundImage: 'linear-gradient(90deg, #ff6b6b, #4ecdc4, #54a0ff, #ff6b6b)',
+                backgroundSize: '300% 100%'
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ 
+                opacity: 1, 
+                y: 0,
+                backgroundPosition: ['300% 0%', '0% 0%']
+              }}
+              transition={{
+                opacity: { duration: 0.5 },
+                y: { duration: 0.5 },
+                backgroundPosition: {
+                  duration: 15,
+                  ease: "linear",
+                  repeat: Infinity,
+                  repeatType: "loop"
+                }
+              }}
+            >
+              { "RANDY" }
+            </motion.p>
+            <motion.p 
+              className="text-4xl -mt-10 absolute right-0 mr-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              CS @ <span className="font-bold text-[#4E3629]">BROWN</span>
+            </motion.p>
           </div>
       </div>
     </div>
