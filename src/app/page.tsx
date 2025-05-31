@@ -9,7 +9,7 @@ export default function Home() {
       <div className="h-full flex flex-col justify-center items-center">
           <div className="relative">
             <motion.p 
-              className="text-4xl -mb-10 ml-2 absolute left-0"
+              className="text-2xl md:text-4xl -mb-6 md:-mb-10 ml-1 md:ml-2 absolute left-0"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -17,7 +17,7 @@ export default function Home() {
               HI 👋, I'M
             </motion.p> 
             <motion.p 
-              className="text-[125px] font-bold bg-clip-text text-transparent whitespace-nowrap"
+              className="text-[80px] md:text-[125px] font-bold bg-clip-text text-transparent whitespace-nowrap"
               style={{
                 backgroundImage: 'linear-gradient(90deg, #ff6b6b, #4ecdc4, #54a0ff, #ff6b6b)',
                 backgroundSize: '300% 100%'
@@ -42,7 +42,7 @@ export default function Home() {
               { "RANDY" }
             </motion.p>
             <motion.p 
-              className="text-4xl -mt-10 absolute right-0 mr-6"
+              className="text-2xl md:text-4xl -mt-6 md:-mt-10 absolute right-0 mr-4 md:mr-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
