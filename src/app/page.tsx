@@ -5,9 +5,7 @@ import { RetroGrid } from "@/components/magicui/retro-grid";
 export default function Home() {
   return (
     <div className="h-screen flex flex-col items-center">
-      <div className="h-[50%] w-full absolute bottom-0">
-        <RetroGrid />
-      </div>
+      <RetroGrid />
       <div className="h-full flex flex-col justify-center items-center min-h-[600px]">
           <div className="relative">
             <motion.p 
