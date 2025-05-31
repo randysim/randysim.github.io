@@ -28,6 +28,9 @@ html, body {
 
 .animate-grid {
   animation: grid 20s linear infinite;
+  will-change: transform;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
 @layer base {
