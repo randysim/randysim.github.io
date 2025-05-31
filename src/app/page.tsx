@@ -8,9 +8,10 @@ export default function Home() {
       
       <Particles 
         className="absolute inset-0 z-0"
-        quantity={200}
+        quantity={150}
         ease={80}
         color="#000000"
+        size={1.5}
         refresh
       />
       <div className="h-full flex flex-col justify-center items-center min-h-[600px]">
