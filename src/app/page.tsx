@@ -1,13 +1,18 @@
 'use client'
 import { motion } from 'framer-motion'
-import { RetroGrid } from "@/components/magicui/retro-grid";
+import { Particles } from "@/components/magicui/particles";
 
 export default function Home() {
   return (
     <div className="h-screen flex flex-col items-center">
-      <div className="h-[50%] w-full absolute bottom-0">
-        <RetroGrid />
-      </div>
+      
+      <Particles 
+        className="absolute inset-0 z-0"
+        quantity={200}
+        ease={80}
+        color="#000000"
+        refresh
+      />
       <div className="h-full flex flex-col justify-center items-center min-h-[600px]">
           <div className="relative">
             <motion.p 
