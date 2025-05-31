@@ -9,14 +9,8 @@ export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => window.removeEventListener('resize', checkMobile);
+
   }, []);
 
   return (
@@ -24,7 +18,7 @@ export default function Home() {
       <div className="h-screen flex flex-col items-center">
         <Particles 
           className="absolute inset-0 z-0"
-          quantity={isMobile ? 60 : 150}
+          quantity={isMobile ? 50 : 100}
           ease={80}
           color="#000000"
           size={1.5}
@@ -124,7 +118,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <div className="relative w-[85%] mx-auto aspect-square rounded-2xl overflow-hidden bg-gray-100">
+              <div className="relative w-[85%] mx-auto aspect-square rounded-2xl overflow-hidden bg-gray-100 shadow-2xl">
                 <Image
                   src="/me.jpg"
                   alt="Randy Sim"
