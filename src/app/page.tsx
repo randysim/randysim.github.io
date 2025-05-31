@@ -14,7 +14,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              HI 👋, I'M
+              { "HI 👋, I'M" }
             </motion.p> 
             <motion.p 
               className="text-[80px] md:text-[125px] font-bold bg-clip-text text-transparent whitespace-nowrap"
