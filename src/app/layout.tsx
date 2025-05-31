@@ -7,7 +7,10 @@ const font = IBM_Plex_Sans({ weight: "400", subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Randy Sim",
-  description: "CS @ Brown | Software Engineer"
+  description: "CS @ Brown | Software Engineer",
+  icons: {
+    icon: '/ICON.png'
+  }
 };
 
 export const viewport : Viewport = {
