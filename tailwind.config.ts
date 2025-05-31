@@ -13,10 +13,15 @@ const config: Config = {
         grid: {
           '0%': { transform: 'translateY(0)' },
           '100%': { transform: 'translateY(calc(var(--cell-size) * -1))' }
+        },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
         }
       },
       animation: {
-        grid: 'grid 20s linear infinite'
+        grid: 'grid 20s linear infinite',
+        'fade-in': 'fade-in 1s ease-out'
       },
   		colors: {
   			background: 'hsl(var(--background))',
