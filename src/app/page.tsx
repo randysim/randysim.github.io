@@ -135,10 +135,21 @@ export default function Home() {
       <div className="min-h-screen bg-white pb-32 md:pb-20 px-4 md:px-8">
         <motion.h2 
           className="text-4xl md:text-5xl font-bold text-black text-center mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
           Projects
         </motion.h2>
-        <Projects />
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <Projects />
+        </motion.div>
       </div>
     </div>
   );
