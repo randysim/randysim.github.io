@@ -4,6 +4,7 @@ import { Particles } from "@/components/magicui/particles";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from 'react';
+import Projects from '@/components/home/projects';
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -18,7 +19,7 @@ export default function Home() {
       <div className="h-screen flex flex-col items-center">
         <Particles 
           className="absolute inset-0 z-0"
-          quantity={isMobile ? 50 : 100}
+          quantity={isMobile ? 30 : 100}
           ease={80}
           color="#000000"
           size={1.5}
@@ -70,7 +71,7 @@ export default function Home() {
             </div>
         </div>
       </div>
-      <div className="min-h-screen bg-white py-20 px-4 md:px-8">
+      <div className=" bg-white py-20 px-4 md:px-8 mb-12">
         <motion.div 
           className="max-w-6xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
@@ -130,6 +131,14 @@ export default function Home() {
             </motion.div>
           </div>
         </motion.div>
+      </div>
+      <div className="min-h-screen bg-white pb-32 md:pb-20 px-4 md:px-8">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold text-black text-center mb-8"
+        >
+          Projects
+        </motion.h2>
+        <Projects />
       </div>
     </div>
   );
