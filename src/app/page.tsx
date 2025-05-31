@@ -88,12 +88,12 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <motion.h2 
-                className="text-4xl md:text-5xl font-bold mb-8 text-black"
+                className="text-4xl md:text-5xl font-bold mb-8 text-black text-center md:text-left"
               >
                 About Me
               </motion.h2>
               <motion.div
-                className="space-y-6 text-lg md:text-xl text-black"
+                className="space-y-6 text-lg md:text-xl text-black text-center md:text-left"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
