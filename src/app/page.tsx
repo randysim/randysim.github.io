@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="h-screen flex flex-col items-center">
       <RetroGrid />
-      <div className="h-full flex flex-col justify-center items-center">
+      <div className="h-full flex flex-col justify-center items-center min-h-[600px]">
           <div className="relative">
             <motion.p 
               className="text-2xl md:text-4xl -mb-6 md:-mb-10 ml-1 md:ml-2 absolute left-0"
