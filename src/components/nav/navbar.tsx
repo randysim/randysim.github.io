@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarIcon, HomeIcon, MailIcon, PencilIcon } from "lucide-react";
+import { CalendarIcon, HomeIcon, MailIcon, NewspaperIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
  
@@ -61,7 +61,8 @@ const Icons = {
  
 const DATA = {
   navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" }
+    { href: "/", icon: HomeIcon, label: "Home", target: "_self" },
+    { href: "/resume.pdf", icon: NewspaperIcon, label: "Resume", target: "_blank" },
   ],
   contact: {
     social: {
@@ -104,6 +105,7 @@ export default function Navbar() {
                             buttonVariants({ variant: "ghost", size: "icon" }),
                             "size-12 rounded-full",
                             )}
+                            target={item.target}
                         >
                             <item.icon className="size-4" />
                         </Link>
