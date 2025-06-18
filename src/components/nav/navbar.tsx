@@ -78,7 +78,7 @@ const DATA = {
       },
       YouTube: {
         name: "YouTube",
-        url: "https://www.youtube.com/@GandyDev",
+        url: "https://www.youtube.com/@randysimy",
         icon: Icons.youtube,
       },
       "randysim9@gmail.com": {
