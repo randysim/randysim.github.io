@@ -231,4 +231,18 @@ const cards = [
       );
     },
   },
+  {
+    description: "Be the first to every internship",
+    title: "opportunity.dev",
+    src: "/opportunity-dev.png",
+    ctaText: "Visit",
+    ctaLink: "https://opportunity.dev",
+    content: () => {
+      return (
+        <p>
+          { `Built opportunity.dev, a platform that helps students find and apply for internships. The platform aggregates internship listings from various sources and provides personalized recommendations based on user preferences. It uses a decentralized worker system to consistently refresh listings and makes sure our users are the first to know about every opportunity.` }
+        </p>
+      )
+    }
+  }
 ];
