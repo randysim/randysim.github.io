@@ -231,19 +231,4 @@ const cards = [
       );
     },
   },
-
-  {
-    description: "Gamified Productivity",
-    title: "Reborn",
-    src: "/reborn.png",
-    ctaText: "GitHub",
-    ctaLink: "https://github.com/randysim/reborn",
-    content: () => {
-      return (
-        <p>
-            { `Built Reborn, a gamified productivity app that encourages users to complete their tasks through stats, death trackers, and reminders. Was inspired by the anime Solo-Leveling to create a similar self-improvement system. Built using NextJS, Spring Boot, and PostgreSQL and deployed on AWS EC2 for a short time.`}
-        </p>
-      );
-    },
-  },
 ];

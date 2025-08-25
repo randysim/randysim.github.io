@@ -151,51 +151,6 @@ export default function Home() {
           <Projects />
         </motion.div>
       </div>
-      
-      <div className="bg-gray-50 py-20 md:px-8">
-        <motion.div 
-          className="max-w-6xl mx-auto"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-black text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Productivity Tools
-          </motion.h2>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <motion.div
-              className="bg-white rounded-xl p-6 hover:shadow-xl transition-shadow duration-300"
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Link href="/eyetimer" className="block">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8l3 3m6-3a9 9 11-189" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Eye Timer</h3>
-                  <p className="text-gray-600">Take care of your eyes with regular breaks</p>
-                </div>
-              </Link>
-            </motion.div>
-          </motion.div>
-        </motion.div>
-      </div>
     </div>
   );
 }
