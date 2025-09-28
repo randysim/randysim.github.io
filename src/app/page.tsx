@@ -60,14 +60,31 @@ export default function Home() {
               >
                 { "RANDY" }
               </motion.p>
-              <motion.p 
-                className="text-2xl md:text-4xl -mt-6 md:-mt-10 absolute right-0 mr-4 md:mr-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-              >
-                CS @ <span className="font-bold text-[#4E3629]">BROWN</span>
-              </motion.p>
+              <div className="absolute right-0 mr-4 md:mr-6">
+                <motion.p 
+                  className="text-2xl md:text-4xl -mt-6 md:-mt-10 text-right"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                >
+                  CS @ <span className="font-bold text-[#4E3629]">BROWN</span>
+                </motion.p>
+                <motion.p 
+                  className="text-base md:text-lg text-right mt-1 text-gray-600 flex items-center justify-end gap-1"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                >
+                  (Incoming at 
+                  <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h11v11H0V0zm12 0h11v11H12V0zM0 12h11v11H0V12zm12 0h11v11H12V12z" fill="#F25022"/>
+                    <path d="M12 0h11v11H12V0z" fill="#7FBA00"/>
+                    <path d="M0 12h11v11H0V12z" fill="#00A4EF"/>
+                    <path d="M12 12h11v11H12V12z" fill="#FFB900"/>
+                  </svg>
+                  )
+                </motion.p>
+              </div>
             </div>
         </div>
       </div>
